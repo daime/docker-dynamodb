@@ -7,6 +7,6 @@ RUN tar xfz /opt/dynamodb/dynamodb_local_latest
 
 VOLUME ["/var/lib/dynamodb"]
 
-EXPOSE 8000
+EXPOSE 4761
 
-CMD ["/usr/bin/java", "-Djava.library.path=./DynamoDBLocal_lib", "-jar", "DynamoDBLocal.jar", "-dbPath", "/var/lib/dynamodb", "-port", "8000"]
+CMD ["/usr/bin/java", "-Djava.library.path=./DynamoDBLocal_lib", "-jar", "DynamoDBLocal.jar", "-dbPath", "/var/lib/dynamodb", "-port", "4761"]
